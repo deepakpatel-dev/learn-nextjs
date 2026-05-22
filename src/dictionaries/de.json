@@ -1,0 +1,25 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "about": "Über uns"
+  },
+  "home": {
+    "title": "Next.js Internationalisierung",
+    "subtitle": "Diese Seite wird auf Deutsch gerendert",
+    "description": "Der App Router verwaltet i18n über ein dynamisches [lang]-Segment. Jede Seite empfängt das Locale als Parameter und lädt das passende JSON-Wörterbuch serverseitig.",
+    "howItWorks": "Wie es funktioniert",
+    "viewInGerman": "← Auf Englisch anzeigen"
+  },
+  "about": {
+    "title": "Über uns",
+    "description": "Dies ist die Über-uns-Seite. Der Inhalt wird aus de.json geladen und serverseitig gerendert — ohne clientseitige Übersetzungsbibliothek.",
+    "backHome": "← Zurück zur Startseite"
+  },
+  "localeSwitcher": {
+    "label": "Sprache"
+  },
+  "language": {
+    "en": "Englisch",
+    "de": "Deutsch"
+  }
+}

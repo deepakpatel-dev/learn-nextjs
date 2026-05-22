@@ -1,0 +1,25 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About"
+  },
+  "home": {
+    "title": "Next.js Internationalization",
+    "subtitle": "This page is rendered in English",
+    "description": "The App Router handles i18n via a dynamic [lang] segment at the top of the route tree. Each page receives the locale as a param and loads the matching JSON dictionary server-side.",
+    "howItWorks": "How it works",
+    "viewInGerman": "View in German →"
+  },
+  "about": {
+    "title": "About",
+    "description": "This is the About page. Its content is loaded from en.json and rendered on the server — no client-side translation library needed.",
+    "backHome": "← Back to Home"
+  },
+  "localeSwitcher": {
+    "label": "Language"
+  },
+  "language": {
+    "en": "English",
+    "de": "German"
+  }
+}
