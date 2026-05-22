@@ -20,15 +20,14 @@ const modules = [
   {
     number: "02",
     title: "Data Fetching",
-    status: "soon",
+    status: "done",
     description:
-      "Server-side fetch, caching strategies, revalidation, React cache(), Server Actions, and SWR / React Query on the client.",
+      "getStaticProps (SSG), getServerSideProps (SSR), and getStaticPaths (dynamic SSG) — Pages Router data-fetching functions with live JSONPlaceholder demos.",
     topics: [
-      { label: "fetch() in Server Components", href: "#" },
-      { label: "Static & Dynamic Caching", href: "#" },
-      { label: "Incremental Static Regeneration", href: "#" },
-      { label: "Server Actions", href: "#" },
-      { label: "Client-side fetching (SWR)", href: "#" },
+      { label: "Overview", href: "/data-fetching" },
+      { label: "getStaticProps", href: "/data-fetching/static-props" },
+      { label: "getServerSideProps", href: "/data-fetching/server-side-props" },
+      { label: "getStaticPaths + [id]", href: "/data-fetching/posts/1" },
     ],
   },
   {

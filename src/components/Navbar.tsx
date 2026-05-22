@@ -13,6 +13,7 @@ const navLinks = [
   { href: "/redirects", label: "Redirects" },
   { href: "/login", label: "Login" },
   { href: "/en", label: "i18n" },
+  { href: "/data-fetching", label: "Data Fetching" },
 ];
 
 export default function Navbar() {
