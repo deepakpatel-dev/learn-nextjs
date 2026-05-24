@@ -1,0 +1,74 @@
+/*
+  Button.module.css
+  Demonstrates specificity control via CSS Modules + component hierarchy.
+
+  Key idea: every class here is a single-class selector (.btn, .primary, …)
+  so all rules share the same specificity (0,1,0).
+  The ORDER of rule declarations — not specificity hacks — determines which
+  rule "wins" when two selectors match.
+*/
+
+/* ── Base button ──────────────────────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 150ms ease;
+  font-family: inherit;
+}
+
+/* ── Variant modifiers ────────────────────────────────────────────────────── */
+.primary {
+  background: #6d28d9;
+  color: #ffffff;
+  border-color: #6d28d9;
+}
+.primary:hover {
+  background: #5b21b6;
+  border-color: #5b21b6;
+}
+
+.secondary {
+  background: #ffffff;
+  color: #374151;
+  border-color: #d1d5db;
+}
+.secondary:hover {
+  background: #f9fafb;
+  border-color: #9ca3af;
+}
+
+.danger {
+  background: #dc2626;
+  color: #ffffff;
+  border-color: #dc2626;
+}
+.danger:hover {
+  background: #b91c1c;
+}
+
+/* ── Size modifiers ───────────────────────────────────────────────────────── */
+.sm { padding: 0.25rem 0.75rem;  font-size: 0.75rem; border-radius: 0.375rem; }
+.lg { padding: 0.75rem 1.75rem;  font-size: 1rem;    border-radius: 0.625rem; }
+
+/* ── State modifiers ──────────────────────────────────────────────────────── */
+.disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.fullWidth { width: 100%; justify-content: center; }
+
+/* ── Slot: parent can pass extra styles via className prop ────────────────
+   No rule needed — the className is simply appended by the parent:
+   <Button className={styles.myOverride} />
+   Because all classes share the same specificity, whichever is declared
+   LAST in the final stylesheet wins — which is always the consumer's class.
+*/

@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import "./globals.css";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Next.js Routing Exploration",
-  description: "Learning Next.js App Router — routing, nested routing, dynamic routes, route groups, and catch-all routes",
+  title: "Learn Next.js",
+  description: "A hands-on reference repo covering every major Next.js topic — routing, data fetching, server actions, styling, and more.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -17,9 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-screen bg-gray-50 text-gray-900 flex flex-col">
         <Navbar />
         <main className="flex-1">{children}</main>
-        <footer className="bg-gray-900 text-gray-400 text-center text-sm py-4">
-          Next.js Routing Exploration — App Router
-        </footer>
+        <Footer />
       </body>
     </html>
   );

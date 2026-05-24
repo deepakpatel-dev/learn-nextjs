@@ -15,6 +15,12 @@ const CORS_HEADERS = [
 ];
 
 const nextConfig: NextConfig = {
+  // Inject a global Sass variable ($global-brand) into every .scss file via
+  // sassOptions.additionalData — no @use import needed in individual files.
+  sassOptions: {
+    additionalData: `$global-brand: #f97316;`,
+  },
+
   async headers() {
     return [
       // Apply CORS headers to every /api/* route.

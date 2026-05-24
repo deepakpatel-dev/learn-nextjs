@@ -1,0 +1,95 @@
+/*
+  Card.module.css — CSS Module for the Card component demo
+  Next.js automatically scopes every class name here to this file.
+  The generated class will look like:  Card_card__xK2mQ
+  so it can NEVER clash with any other .card class in the project.
+*/
+
+/* ── Base card ────────────────────────────────────────────────────────────── */
+.card {
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* ── Card title ───────────────────────────────────────────────────────────── */
+.title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin: 0 0 0.375rem;
+  color: #111827;
+}
+
+/* ── Card subtitle ────────────────────────────────────────────────────────── */
+.subtitle {
+  font-size: 0.8125rem;
+  color: #6b7280;
+  margin: 0 0 1rem;
+}
+
+/* ── Card body text ───────────────────────────────────────────────────────── */
+.body {
+  font-size: 0.875rem;
+  color: #374151;
+  line-height: 1.6;
+}
+
+/* ── Variants: color themes ─────────────────────────────────────────────────
+   These use `composes` to extend the base .card — composition is a
+   CSS Modules feature that avoids copy-pasting rules.
+*/
+.cardPurple {
+  composes: card;                   /* inherit base styles */
+  border-color: #c4b5fd;
+  background: linear-gradient(135deg, #faf5ff 0%, #ede9fe 100%);
+}
+
+.cardBlue {
+  composes: card;
+  border-color: #bfdbfe;
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+}
+
+.cardGreen {
+  composes: card;
+  border-color: #bbf7d0;
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+}
+
+/* ── Badge ────────────────────────────────────────────────────────────────── */
+.badge {
+  display: inline-block;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  font-family: ui-monospace, monospace;
+  padding: 0.125rem 0.5rem;
+  border-radius: 9999px;
+  background: #f3f4f6;
+  color: #374151;
+  margin-bottom: 0.75rem;
+}
+
+/* ── Tag row ──────────────────────────────────────────────────────────────── */
+.tagRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+  margin-top: 0.875rem;
+}
+
+.tag {
+  font-size: 0.6875rem;
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+  border: 1px solid #e5e7eb;
+  color: #6b7280;
+  background: #f9fafb;
+}

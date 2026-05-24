@@ -1,0 +1,15 @@
+// variables.module.scss — exports Sass variables to JavaScript
+// Import this file as a JS object; Next.js compiles it and maps :export keys.
+
+@use "variables" as *;
+
+:export {
+  colorPrimary:      $color-primary;
+  colorPrimaryDark:  $color-primary-dark;
+  colorPrimaryLight: $color-primary-light;
+  colorText:         $color-text;
+  colorMuted:        $color-muted;
+  shadowMd:          $shadow-md;
+  spacingLg:         $spacing-lg;
+  radiusLg:          $radius-lg;
+}

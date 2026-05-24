@@ -14,6 +14,8 @@ const navLinks = [
   { href: "/login", label: "Login" },
   { href: "/en", label: "i18n" },
   { href: "/data-fetching", label: "Data Fetching" },
+  { href: "/server-actions", label: "Server Actions" },
+  { href: "/styling",        label: "Styling" },
 ];
 
 export default function Navbar() {

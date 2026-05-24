@@ -32,28 +32,31 @@ const modules = [
   },
   {
     number: "03",
-    title: "Rendering",
-    status: "soon",
+    title: "Server Actions",
+    status: "done",
     description:
-      "Server Components vs Client Components, SSR, SSG, ISR, PPR (Partial Pre-rendering), and Streaming with Suspense.",
+      "Async server functions for form submission, data mutations, authentication (cookies + redirect), and background tasks — no API routes needed.",
     topics: [
-      { label: "Server vs Client Components", href: "#" },
-      { label: "SSR / SSG / ISR", href: "#" },
-      { label: "Streaming & Suspense", href: "#" },
-      { label: "Partial Pre-rendering (PPR)", href: "#" },
+      { label: "Overview",          href: "/server-actions" },
+      { label: "Form Submission",   href: "/server-actions/form-submission" },
+      { label: "Data Mutations",    href: "/server-actions/data-mutations" },
+      { label: "Authentication",    href: "/server-actions/authentication" },
+      { label: "Background Tasks",  href: "/server-actions/background-tasks" },
     ],
   },
   {
     number: "04",
     title: "Styling",
-    status: "soon",
+    status: "done",
     description:
-      "Tailwind CSS, CSS Modules, global styles, CSS-in-JS, and the next/font optimization system.",
+      "Global stylesheets, CSS Modules (scoped class names, composes), and importing CSS directly from node_modules packages.",
     topics: [
-      { label: "Tailwind CSS", href: "#" },
-      { label: "CSS Modules", href: "#" },
-      { label: "next/font — Google & Local Fonts", href: "#" },
-      { label: "CSS-in-JS (styled-components)", href: "#" },
+      { label: "Overview",                       href: "/styling" },
+      { label: "Global Stylesheets",             href: "/styling/global-styles" },
+      { label: "CSS Modules",                    href: "/styling/css-modules" },
+      { label: "Styles from node_modules",       href: "/styling/node-modules" },
+      { label: "Specificity & Scoped Variables", href: "/styling/specificity" },
+      { label: "Sass/SCSS",                      href: "styling/sass" },
     ],
   },
   {
@@ -204,9 +207,9 @@ export default function HomePage() {
 │   ├── [lang]/                    not-found.tsx
 │   └── api/auth/login/ + logout/
 │
-├── [02 — Data Fetching]           (coming soon)
-├── [03 — Rendering]               (coming soon)
-├── [04 — Styling]                 (coming soon)
+├── [02 — Data Fetching]           pages/data-fetching/
+├── [03 — Server Actions]          server-actions/
+├── [04 — Styling]                 styling/   global-styles/   css-modules/   node-modules/
 ├── [05 — Optimization]            (coming soon)
 ├── [06 — Configuration]           (coming soon)
 ├── [07 — Components & Patterns]   (coming soon)
