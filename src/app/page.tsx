@@ -62,18 +62,35 @@ const modules = [
   {
     number: "05",
     title: "Optimization",
-    status: "soon",
+    status: "done",
     description:
-      "next/image, next/font, Script loading, metadata API, bundle analysis, lazy loading, and Core Web Vitals.",
+      "Dynamic imports, image format selection, LCP optimization, lazy loading, Intersection Observer, specific imports, prefetch control, and bundle analysis.",
     topics: [
-      { label: "next/image", href: "#" },
-      { label: "Metadata API (SEO)", href: "#" },
-      { label: "Script & Third-party Optimization", href: "#" },
-      { label: "Bundle Analysis", href: "#" },
+      { label: "Dynamic Imports", href: "/optimization/dynamic-imports" },
+      { label: "Image Formats", href: "/optimization/images" },
+      { label: "LCP Optimization", href: "/optimization/lcp" },
+      { label: "Lazy Loading", href: "/optimization/lazy-loading" },
+      { label: "Intersection Observer", href: "/optimization/intersection-observer" },
+      { label: "Specific Imports", href: "/optimization/specific-imports" },
+      { label: "Prefetch False", href: "/optimization/prefetch" },
+      { label: "Bundle Analyzer", href: "/optimization/bundle-analyzer" },
     ],
   },
   {
     number: "06",
+    title: "Draft Mode",
+    status: "done",
+    description:
+      "Preview unpublished CMS content without affecting public visitors. Uses a signed cookie to bypass static cache and force dynamic rendering for authenticated editors.",
+    topics: [
+      { label: "Overview & Code",  href: "/draft-mode" },
+      { label: "Live Preview Demo", href: "/draft-mode/preview" },
+      { label: "Enable Draft Mode", href: "/api/draft?secret=demo-preview-secret" },
+      { label: "Disable Draft Mode", href: "/api/draft/disable" },
+    ],
+  },
+  {
+    number: "07",
     title: "Configuration",
     status: "soon",
     description:
@@ -86,7 +103,7 @@ const modules = [
     ],
   },
   {
-    number: "07",
+    number: "08",
     title: "Components & Patterns",
     status: "soon",
     description:
@@ -99,7 +116,7 @@ const modules = [
     ],
   },
   {
-    number: "08",
+    number: "09",
     title: "Deploying",
     status: "soon",
     description:

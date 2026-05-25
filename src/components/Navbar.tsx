@@ -16,6 +16,8 @@ const navLinks = [
   { href: "/data-fetching", label: "Data Fetching" },
   { href: "/server-actions", label: "Server Actions" },
   { href: "/styling",        label: "Styling" },
+  { href: "/optimization",   label: "Optimization" },
+  { href: "/draft-mode",     label: "Draft Mode" },
 ];
 
 export default function Navbar() {
@@ -33,7 +35,7 @@ export default function Navbar() {
               <Link
                 href={href}
                 className={`hover:text-blue-400 transition-colors ${
-                  pathname === href || (href !== "/" && pathname.startsWith(href))
+                  pathname === href || (href !== "/" && (pathname ?? "").startsWith(href))
                     ? "text-blue-400 font-semibold"
                     : "text-gray-300"
                 }`}
