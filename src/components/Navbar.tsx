@@ -17,7 +17,8 @@ const navLinks = [
   { href: "/server-actions", label: "Server Actions" },
   { href: "/styling",        label: "Styling" },
   { href: "/optimization",   label: "Optimization" },
-  { href: "/draft-mode",     label: "Draft Mode" },
+  { href: "/draft-mode",        label: "Draft Mode" },
+  { href: "/file-conventions",  label: "File Conventions" },
 ];
 
 export default function Navbar() {

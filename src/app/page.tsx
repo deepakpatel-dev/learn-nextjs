@@ -91,6 +91,23 @@ const modules = [
   },
   {
     number: "07",
+    title: "File Conventions",
+    status: "done",
+    description:
+      "Special filenames in the app/ directory: page.js, layout.js, loading.js, error.js, not-found.js, template.js, route.js, default.js, instrumentation.js, middleware.js, Route Segment Config, and Metadata Files.",
+    topics: [
+      { label: "Overview",              href: "/file-conventions" },
+      { label: "loading.js demo",       href: "/file-conventions/loading" },
+      { label: "error.js demo",         href: "/file-conventions/error" },
+      { label: "not-found.js demo",     href: "/file-conventions/not-found" },
+      { label: "template.js demo",      href: "/file-conventions/template" },
+      { label: "route.js",              href: "/file-conventions/route" },
+      { label: "Route Segment Config",  href: "/file-conventions/route-segment-config" },
+      { label: "Metadata Files",        href: "/file-conventions/metadata-files" },
+    ],
+  },
+  {
+    number: "08",
     title: "Configuration",
     status: "soon",
     description:
@@ -103,7 +120,7 @@ const modules = [
     ],
   },
   {
-    number: "08",
+    number: "09",
     title: "Components & Patterns",
     status: "soon",
     description:
@@ -116,7 +133,7 @@ const modules = [
     ],
   },
   {
-    number: "09",
+    number: "10",
     title: "Deploying",
     status: "soon",
     description:
@@ -227,10 +244,12 @@ export default function HomePage() {
 ├── [02 — Data Fetching]           pages/data-fetching/
 ├── [03 — Server Actions]          server-actions/
 ├── [04 — Styling]                 styling/   global-styles/   css-modules/   node-modules/
-├── [05 — Optimization]            (coming soon)
-├── [06 — Configuration]           (coming soon)
-├── [07 — Components & Patterns]   (coming soon)
-└── [08 — Deploying]               (coming soon)`}</pre>
+├── [05 — Optimization]            optimization/
+├── [06 — Draft Mode]              draft-mode/
+├── [07 — File Conventions]        file-conventions/
+├── [08 — Configuration]           (coming soon)
+├── [09 — Components & Patterns]   (coming soon)
+└── [10 — Deploying]               (coming soon)`}</pre>
       </div>
     </div>
   );
