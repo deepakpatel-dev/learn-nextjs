@@ -1,8 +1,9 @@
 // Pages Router — /data-fetching
 // Overview page explaining all three data-fetching methods side by side.
 
+import type { ReactNode } from "react";
 import Link from "next/link";
-import DataFetchingNav from "@/components/DataFetchingNav";
+import DataFetchingLayout from "@/components/DataFetchingLayout";
 
 const methods = [
   {
@@ -81,10 +82,8 @@ const methods = [
 
 export default function DataFetchingOverview() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <DataFetchingNav />
-
-      <div className="max-w-5xl mx-auto px-6 py-12">
+    <div className="max-w-5xl mx-auto">
+      <div className="">
         {/* Header */}
         <div className="mb-10">
           <span className="text-xs font-mono bg-gray-200 text-gray-600 px-2 py-1 rounded">
@@ -171,3 +170,7 @@ getInitialProps()                Not supported — use the above`}</pre>
     </div>
   );
 }
+
+DataFetchingOverview.getLayout = (page: ReactNode) => (
+  <DataFetchingLayout>{page}</DataFetchingLayout>
+);

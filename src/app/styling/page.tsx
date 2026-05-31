@@ -87,7 +87,7 @@ export default function StylingOverviewPage() {
       {/* Header */}
       <div className="mb-10">
         <span className="text-xs font-mono bg-purple-100 text-purple-800 px-2 py-1 rounded">
-          Module 04 — Styling
+          Module 05 — Styling
         </span>
         <h1 className="text-3xl font-bold mt-3 mb-2">Stylesheet in Next.js</h1>
         <p className="text-gray-500 leading-relaxed max-w-2xl">

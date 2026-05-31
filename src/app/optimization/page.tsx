@@ -97,7 +97,7 @@ export default function OptimizationPage() {
     <div>
       <div className="mb-8">
         <span className="text-xs font-mono bg-blue-100 text-blue-800 px-2 py-1 rounded">
-          Module 05 — Optimization
+          Module 06 — Optimization
         </span>
         <h1 className="text-3xl font-bold mt-3 mb-2">Bundle Optimization</h1>
         <p className="text-gray-500 leading-relaxed">

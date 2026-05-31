@@ -19,24 +19,36 @@ export default function OptimizationNav() {
   const pathname = usePathname();
 
   return (
-    <nav className="space-y-0.5">
-      {topics.map(({ label, href }) => {
-        const active = pathname === href;
-        return (
-          <Link
-            key={href}
-            href={href}
-            prefetch={false}
-            className={`block text-sm px-3 py-1.5 rounded-lg transition-colors ${
-              active
-                ? "text-blue-600 bg-blue-50 font-medium"
-                : "text-gray-600 hover:text-blue-600 hover:bg-blue-50"
-            }`}
-          >
-            {label}
-          </Link>
-        );
-      })}
+    <nav className="w-52 shrink-0">
+      <div className="sticky top-6">
+        <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2 px-3">
+          Module 06 — Optimization
+        </p>
+        <ul className="space-y-0.5">
+          {topics.map(({ label, href }) => {
+            const active =
+              href === "/optimization"
+                ? pathname === href
+                : (pathname ?? "").startsWith(href);
+            return (
+              <li key={href}>
+                <Link
+                  key={href}
+                  href={href}
+                  prefetch={false}
+                  className={`block text-sm px-3 py-1.5 rounded-lg transition-colors ${
+                    active
+                      ? "bg-blue-50 text-blue-700 font-medium"
+                      : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+                  }`}
+                >
+                  {label}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </nav>
   );
 }

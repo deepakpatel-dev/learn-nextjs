@@ -6,8 +6,9 @@
 // the time stays the same until the next build/revalidation.
 
 import type { GetStaticProps } from "next";
+import type { ReactNode } from "react";
 import Link from "next/link";
-import DataFetchingNav from "@/components/DataFetchingNav";
+import DataFetchingLayout from "@/components/DataFetchingLayout";
 
 type Post = {
   id: number;
@@ -42,10 +43,8 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 // ─── Page Component ────────────────────────────────────────────────────────
 export default function StaticPropsPage({ posts, generatedAt }: Props) {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <DataFetchingNav />
-
-      <div className="max-w-5xl mx-auto px-6 py-10">
+    <div>
+      <div className="max-w-5xl mx-auto">
 
         {/* Header */}
         <div className="mb-8">
@@ -166,3 +165,5 @@ export default function StaticPropsPage({ posts, generatedAt }: Props) {
     </div>
   );
 }
+
+StaticPropsPage.getLayout = (page: ReactNode) => <DataFetchingLayout>{page}</DataFetchingLayout>;

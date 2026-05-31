@@ -46,6 +46,19 @@ const modules = [
   },
   {
     number: "04",
+    title: "Draft Mode",
+    status: "done",
+    description:
+      "Preview unpublished CMS content without affecting public visitors. Uses a signed cookie to bypass static cache and force dynamic rendering for authenticated editors.",
+    topics: [
+      { label: "Overview & Code",  href: "/draft-mode" },
+      { label: "Live Preview Demo", href: "/draft-mode/preview" },
+      { label: "Enable Draft Mode", href: "/api/draft?secret=demo-preview-secret" },
+      { label: "Disable Draft Mode", href: "/api/draft/disable" },
+    ],
+  },
+  {
+    number: "05",
     title: "Styling",
     status: "done",
     description:
@@ -60,33 +73,20 @@ const modules = [
     ],
   },
   {
-    number: "05",
+    number: "06",
     title: "Optimization",
     status: "done",
     description:
       "Dynamic imports, image format selection, LCP optimization, lazy loading, Intersection Observer, specific imports, prefetch control, and bundle analysis.",
     topics: [
-      { label: "Dynamic Imports", href: "/optimization/dynamic-imports" },
-      { label: "Image Formats", href: "/optimization/images" },
-      { label: "LCP Optimization", href: "/optimization/lcp" },
-      { label: "Lazy Loading", href: "/optimization/lazy-loading" },
-      { label: "Intersection Observer", href: "/optimization/intersection-observer" },
-      { label: "Specific Imports", href: "/optimization/specific-imports" },
-      { label: "Prefetch False", href: "/optimization/prefetch" },
-      { label: "Bundle Analyzer", href: "/optimization/bundle-analyzer" },
-    ],
-  },
-  {
-    number: "06",
-    title: "Draft Mode",
-    status: "done",
-    description:
-      "Preview unpublished CMS content without affecting public visitors. Uses a signed cookie to bypass static cache and force dynamic rendering for authenticated editors.",
-    topics: [
-      { label: "Overview & Code",  href: "/draft-mode" },
-      { label: "Live Preview Demo", href: "/draft-mode/preview" },
-      { label: "Enable Draft Mode", href: "/api/draft?secret=demo-preview-secret" },
-      { label: "Disable Draft Mode", href: "/api/draft/disable" },
+      { label: "Dynamic Imports",        href: "/optimization/dynamic-imports" },
+      { label: "Image Formats",          href: "/optimization/images" },
+      { label: "LCP Optimization",       href: "/optimization/lcp" },
+      { label: "Lazy Loading",           href: "/optimization/lazy-loading" },
+      { label: "Intersection Observer",  href: "/optimization/intersection-observer" },
+      { label: "Specific Imports",       href: "/optimization/specific-imports" },
+      { label: "Prefetch False",         href: "/optimization/prefetch" },
+      { label: "Bundle Analyzer",        href: "/optimization/bundle-analyzer" },
     ],
   },
   {
@@ -109,40 +109,41 @@ const modules = [
   {
     number: "08",
     title: "Configuration",
-    status: "soon",
+    status: "done",
     description:
-      "next.config.ts, environment variables, TypeScript config, ESLint, absolute imports, and custom webpack/turbopack setup.",
+      "next.config.ts deep dive, environment variables (server vs NEXT_PUBLIC_), TypeScript path aliases, and custom headers, rewrites & redirects.",
     topics: [
-      { label: "next.config.ts deep dive", href: "#" },
-      { label: "Environment Variables", href: "#" },
-      { label: "TypeScript & Path Aliases", href: "#" },
-      { label: "Custom Headers & Rewrites", href: "#" },
+      { label: "next.config.ts",         href: "/configuration/next-config" },
+      { label: "Environment Variables",  href: "/configuration/env-vars" },
+      { label: "TypeScript & Paths",     href: "/configuration/typescript-config" },
+      { label: "Headers & Rewrites",     href: "/configuration/headers-rewrites" },
     ],
   },
   {
     number: "09",
     title: "Components & Patterns",
-    status: "soon",
+    status: "done",
     description:
-      "Error boundaries, loading UI, parallel routes, intercepting routes, Server Actions in forms, and composition patterns.",
+      "Server vs Client Components, composition patterns (Islands, Provider), Parallel Routes with @slots, and Intercepting Routes for modals.",
     topics: [
-      { label: "error.tsx & loading.tsx", href: "#" },
-      { label: "Parallel & Intercepting Routes", href: "#" },
-      { label: "Server Actions in Forms", href: "#" },
-      { label: "Composition Patterns", href: "#" },
+      { label: "Server vs Client",        href: "/components-patterns/server-client" },
+      { label: "Composition Patterns",    href: "/components-patterns/composition" },
+      { label: "Parallel Routes",         href: "/components-patterns/parallel-routes" },
+      { label: "Intercepting Routes",     href: "/components-patterns/intercepting-routes" },
     ],
   },
   {
     number: "10",
     title: "Deploying",
-    status: "soon",
+    status: "done",
     description:
-      "Deploying to Vercel, Docker, Node.js server, and static export. CI/CD pipelines, preview deployments, and environment management.",
+      "Vercel (zero-config), Node.js with PM2 + Nginx, Docker with output: standalone, static export, and CI/CD with GitHub Actions + Lighthouse.",
     topics: [
-      { label: "Deploy to Vercel", href: "#" },
-      { label: "Docker & Self-hosting", href: "#" },
-      { label: "Static Export", href: "#" },
-      { label: "CI/CD with GitHub Actions", href: "#" },
+      { label: "Vercel",              href: "/deploying/vercel" },
+      { label: "Node.js Server",      href: "/deploying/nodejs-server" },
+      { label: "Docker",              href: "/deploying/docker" },
+      { label: "Static Export",       href: "/deploying/static-export" },
+      { label: "GitHub Actions CI/CD",href: "/deploying/github-actions" },
     ],
   },
 ];
@@ -244,12 +245,13 @@ export default function HomePage() {
 ├── [02 — Data Fetching]           pages/data-fetching/
 ├── [03 — Server Actions]          server-actions/
 ├── [04 — Styling]                 styling/   global-styles/   css-modules/   node-modules/
-├── [05 — Optimization]            optimization/
-├── [06 — Draft Mode]              draft-mode/
+├── [04 — Draft Mode]              draft-mode/
+├── [05 — Styling]                 styling/
+├── [06 — Optimization]            optimization/
 ├── [07 — File Conventions]        file-conventions/
-├── [08 — Configuration]           (coming soon)
-├── [09 — Components & Patterns]   (coming soon)
-└── [10 — Deploying]               (coming soon)`}</pre>
+├── [08 — Configuration]           configuration/
+├── [09 — Components & Patterns]   components-patterns/
+└── [10 — Deploying]               deploying/`}</pre>
       </div>
     </div>
   );

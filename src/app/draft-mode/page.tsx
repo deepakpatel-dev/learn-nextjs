@@ -12,7 +12,7 @@ export default function DraftModeOverviewPage() {
       {/* Header */}
       <div>
         <span className="text-xs font-mono bg-amber-100 text-amber-800 px-2 py-1 rounded">
-          Feature — Draft Mode
+          Module 04 — Draft Mode
         </span>
         <h1 className="text-3xl font-bold mt-3 mb-2">Draft Mode</h1>
         <p className="text-gray-500 leading-relaxed">

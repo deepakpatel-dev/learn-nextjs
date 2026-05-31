@@ -33,10 +33,5 @@ export default function Footer() {
   const pathname = usePathname() ?? "/";
   const label    = getModuleLabel(pathname);
 
-  return (
-    <footer className="bg-gray-900 text-gray-400 text-center text-sm py-4 select-none">
-      <span className="text-gray-600 mr-2 font-mono text-xs">▸</span>
-      {label}
-    </footer>
-  );
+  return null;
 }

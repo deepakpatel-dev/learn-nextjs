@@ -5,7 +5,8 @@
 // The timestamp below proves it: every page refresh shows a new time.
 
 import type { GetServerSideProps } from "next";
-import DataFetchingNav from "@/components/DataFetchingNav";
+import type { ReactNode } from "react";
+import DataFetchingLayout from "@/components/DataFetchingLayout";
 
 type User = {
   id: number;
@@ -53,10 +54,8 @@ export default function ServerSidePropsPage({
   queryParams,
 }: Props) {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <DataFetchingNav />
-
-      <div className="max-w-5xl mx-auto px-6 py-10">
+    <div>
+      <div className="max-w-5xl mx-auto">
 
         {/* Header */}
         <div className="mb-8">
@@ -199,3 +198,5 @@ export default function ServerSidePropsPage({
     </div>
   );
 }
+
+ServerSidePropsPage.getLayout = (page: ReactNode) => <DataFetchingLayout>{page}</DataFetchingLayout>;

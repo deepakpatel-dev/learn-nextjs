@@ -11,6 +11,7 @@
 import { notFound } from "next/navigation";
 import { locales, type Locale } from "@/lib/dictionary";
 import Header from "@/components/Header";
+import RoutingNav from "@/components/RoutingNav";
 
 export function generateStaticParams() {
   // Pre-renders a version of every [lang]/* page for each supported locale
@@ -33,13 +34,20 @@ export default async function LangLayout({
 
   return (
     <div lang={lang} className="min-h-screen flex flex-col">
-      {/*
-        Header is an async Server Component.
-        It awaits getDictionary(lang) internally and renders
-        translated nav links without any client-side JS.
-      */}
-      <Header lang={lang as Locale} />
-      <main className="flex-1">{children}</main>
+      <div className="max-w-6xl mx-auto px-6 py-10 w-full">
+        <div className="flex gap-10">
+          <RoutingNav />
+          <div className="flex-1 min-w-0">
+            {/*
+              Header is an async Server Component.
+              It awaits getDictionary(lang) internally and renders
+              translated nav links without any client-side JS.
+            */}
+            <Header lang={lang as Locale} />
+            <main className="flex-1">{children}</main>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

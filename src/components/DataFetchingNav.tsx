@@ -1,43 +1,26 @@
-// DataFetchingNav — shared navigation for Pages Router data-fetching pages.
-// The main App Router Navbar only renders inside app/ routes, so pages/ routes
-// get their own lightweight nav that links back to the main app and between demos.
+// DataFetchingNav — top bar for Pages Router data-fetching pages.
+// Acts as the main Navbar replacement (App Router Navbar doesn't render in pages/).
 
 import Link from "next/link";
-import { useRouter } from "next/router";
-
-const links = [
-  { href: "/data-fetching",                    label: "Overview" },
-  { href: "/data-fetching/static-props",       label: "getStaticProps" },
-  { href: "/data-fetching/server-side-props",  label: "getServerSideProps" },
-  { href: "/data-fetching/posts/1",            label: "getStaticPaths" },
-];
 
 export default function DataFetchingNav() {
-  const { pathname } = useRouter();
-
   return (
-    <nav className="bg-gray-900 text-white px-6 py-4">
-      <div className="max-w-5xl mx-auto flex items-center justify-between flex-wrap gap-4">
-        <Link href="/" className="text-lg font-bold text-blue-400 hover:text-blue-300 transition-colors">
-          ← Learn Next.js
+    <nav className="bg-gray-950 text-white border-b border-gray-800 px-6 h-14 flex items-center sticky top-0 z-50">
+      <div className="max-w-6xl mx-auto w-full flex items-center gap-4">
+        {/* Logo — mirrors App Router Navbar */}
+        <Link href="/" className="flex items-center gap-2 shrink-0">
+          <div className="w-7 h-7 bg-blue-600 rounded-lg flex items-center justify-center">
+            <span className="text-white font-black text-xs">N</span>
+          </div>
+          <span className="font-semibold text-white text-sm">Learn Next.js</span>
         </Link>
 
-        <div className="flex items-center gap-1 flex-wrap">
-          <span className="text-xs font-mono text-gray-500 mr-2">Module 02 — Data Fetching</span>
-          {links.map(({ href, label }) => (
-            <Link
-              key={href}
-              href={href}
-              className={`text-xs px-3 py-1.5 rounded-lg transition-colors font-mono ${
-                pathname === href
-                  ? "bg-blue-600 text-white"
-                  : "text-gray-300 hover:text-white hover:bg-gray-700"
-              }`}
-            >
-              {label}
-            </Link>
-          ))}
-        </div>
+        <div className="h-5 w-px bg-gray-700 shrink-0" />
+
+        <span className="text-xs font-mono text-gray-400">
+          Module 02 — Data Fetching
+          <span className="ml-2 text-gray-600">(Pages Router)</span>
+        </span>
       </div>
     </nav>
   );
